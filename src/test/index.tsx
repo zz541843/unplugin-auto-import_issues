@@ -1,5 +1,3 @@
-import {ElButton} from "element-plus"
-
 export default defineComponent({
     components: {
         // ElButton
