@@ -32,6 +32,11 @@ export default defineConfig({
             ],
         }),
         Components({
+            include: [
+                /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+                /\.vue$/, /\.vue\?vue/, // .vue
+                /\.md$/, // .md
+            ],
             resolvers: [
                 IconsResolver({
                     prefix: false,
@@ -39,6 +44,7 @@ export default defineConfig({
                 }),
                 ElementPlusResolver(),
             ],
+            dirs:['./src/test'],
             dts: './components.d.ts',
         }),
         ElementPlus({
